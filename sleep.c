@@ -37,5 +37,7 @@ __attribute__((naked)) void _start() {
                        "mov (%rsp), %rdi\n"
                        "lea 8(%rsp), %rsi\n"
                        "and $-16, %rsp\n"
-                       "call main\n");
+                       "call main\n"
+                       "mov %rax, %rdi\n"
+                       "call exit\n");
 }
